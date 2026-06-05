@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0e0e0f;
+}
+
+body {
+  margin: 0;
+  background-color: #0e0e0f;
+  color: #fff;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.accordion-body {
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+  max-height: 0;
+  opacity: 0;
+}
+
+.accordion-body.open {
+  max-height: 300px;
+  opacity: 1;
+}
