@@ -63,10 +63,10 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-6 text-sm text-white/30">
-          <Link
-            to="/privacy"
-            className="hover:text-white/60 transition-colors"
-          >
+          <Link to="/riders" className="hover:text-white/60 transition-colors">
+            Ride with Bro
+          </Link>
+          <Link to="/privacy" className="hover:text-white/60 transition-colors">
             Privacy Policy
           </Link>
           <span>© 2026 Bro</span>
