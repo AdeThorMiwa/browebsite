@@ -1,16 +1,28 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 const WA_LINK = 'https://wa.me/2348030675682?text=Hey%20Bro%2C%20I%20need%20something'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)
+  const navRef = useRef<HTMLElement>(null)
+  const [navHeight, setNavHeight] = useState(73)
+
+  // Measure actual nav height so the drawer starts exactly below it
+  useEffect(() => {
+    if (navRef.current) setNavHeight(navRef.current.offsetHeight)
+  }, [])
 
   return (
     <>
       <nav
+        ref={navRef}
         className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4"
-        style={{ backgroundColor: 'rgba(14,14,15,0.92)', backdropFilter: 'blur(12px)', borderBottom: open ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent' }}
+        style={{
+          backgroundColor: 'rgba(14,14,15,0.92)',
+          backdropFilter: 'blur(12px)',
+          borderBottom: open ? '1px solid rgba(255,255,255,0.06)' : '1px solid transparent',
+        }}
       >
         {/* Wordmark — always goes home */}
         <Link to="/" className="font-mono text-xl font-bold tracking-tight text-white">bro.</Link>
@@ -34,34 +46,39 @@ export default function Nav() {
           Chat with Bro
         </a>
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — swap between ☰ and ✕ icons */}
         <button
           onClick={() => setOpen(!open)}
-          className="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5"
+          className="md:hidden relative flex items-center justify-center w-10 h-10 rounded-xl"
+          style={{ backgroundColor: 'rgba(255,255,255,0.06)' }}
           aria-label={open ? 'Close menu' : 'Open menu'}
         >
-          <span
-            className="block w-5 h-0.5 bg-white transition-all duration-300 origin-center"
-            style={{ transform: open ? 'translateY(4px) rotate(45deg)' : undefined }}
-          />
-          <span
-            className="block w-5 h-0.5 bg-white transition-all duration-300"
-            style={{ opacity: open ? 0 : 1 }}
-          />
-          <span
-            className="block w-5 h-0.5 bg-white transition-all duration-300 origin-center"
-            style={{ transform: open ? 'translateY(-4px) rotate(-45deg)' : undefined }}
-          />
+          {open ? (
+            // ✕ close icon
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round">
+              <line x1="2" y1="2" x2="14" y2="14" />
+              <line x1="14" y1="2" x2="2" y2="14" />
+            </svg>
+          ) : (
+            // ☰ hamburger icon
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="white" strokeWidth="1.75" strokeLinecap="round">
+              <line x1="0" y1="1" x2="16" y2="1" />
+              <line x1="0" y1="6" x2="16" y2="6" />
+              <line x1="0" y1="11" x2="16" y2="11" />
+            </svg>
+          )}
         </button>
       </nav>
 
-      {/* Mobile drawer */}
+      {/* Mobile drawer — starts exactly below the nav */}
       <div
-        className="md:hidden fixed inset-0 z-40 flex flex-col pt-[64px] transition-all duration-300"
+        className="md:hidden fixed left-0 right-0 bottom-0 z-40 flex flex-col transition-all duration-300"
         style={{
+          top: navHeight,
           backgroundColor: '#0e0e0f',
           opacity: open ? 1 : 0,
           pointerEvents: open ? 'auto' : 'none',
+          transform: open ? 'translateY(0)' : 'translateY(-8px)',
         }}
       >
         <div className="flex flex-col px-6 pt-8 gap-1">
@@ -74,7 +91,7 @@ export default function Nav() {
           <Link
             to="/riders"
             onClick={() => setOpen(false)}
-            className="flex items-center justify-between px-4 py-4 rounded-2xl text-lg font-semibold text-white transition-colors"
+            className="flex items-center justify-between px-4 py-4 rounded-2xl text-lg font-semibold text-white"
             style={{ backgroundColor: '#18181b' }}
           >
             <span>Ride with Bro</span>
