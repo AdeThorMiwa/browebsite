@@ -69,7 +69,7 @@ export default function Footer() {
           <Link to="/privacy" className="hover:text-white/60 transition-colors">
             Privacy Policy
           </Link>
-          <span>© 2026 Bro</span>
+          <span>© 2026 Y Labs Limited</span>
         </div>
       </div>
     </footer>

@@ -18,8 +18,10 @@ const sections = [
           >
             wa.me/2348030675682
           </a>{" "}
-          and online at usebro.xyz. When this policy refers to "Bro", "we",
-          "us", or "our", it means the operators of this service.
+          and online at usebro.xyz. Bro is a product of{" "}
+          <span className="text-white font-medium">Y Labs Limited</span>. When
+          this policy refers to "Bro", "we", "us", or "our", it means Y Labs
+          Limited.
         </p>
         <p className="mt-3">
           For any privacy-related questions, contact us at:{" "}
