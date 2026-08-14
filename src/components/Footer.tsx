@@ -62,13 +62,11 @@ export default function Footer() {
           </a>
         </div>
 
-        <div className="flex items-center gap-6 text-sm text-white/30">
-          <Link to="/riders" className="hover:text-white/60 transition-colors">
-            Ride with Bro
-          </Link>
-          <Link to="/privacy" className="hover:text-white/60 transition-colors">
-            Privacy Policy
-          </Link>
+        <div className="flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2 text-sm text-white/30">
+          <Link to="/riders" className="hover:text-white/60 transition-colors">Ride with Bro</Link>
+          <Link to="/terms" className="hover:text-white/60 transition-colors">Terms</Link>
+          <Link to="/privacy" className="hover:text-white/60 transition-colors">Privacy Policy</Link>
+          <Link to="/vendor-policy" className="hover:text-white/60 transition-colors">Vendor Policy</Link>
           <span>© 2026 Y Labs Limited</span>
         </div>
       </div>
