@@ -8,7 +8,7 @@ const sections = [
     content: (
       <>
         <p>
-          Bro is a personal assistant service operated in Ibadan, Nigeria,
+          Bro is a personal assistant service operated in Nigeria,
           accessible via WhatsApp at{" "}
           <a
             href={WA_LINK}
@@ -54,10 +54,10 @@ const sections = [
               "Message content",
               "the text of your conversations with Bro, used to understand and fulfil your requests",
             ],
-            ["Delivery address", "if you provide one for order delivery"],
+            ["Delivery address or service location", "if relevant to your request"],
             [
-              "Order details",
-              "items requested, amounts, and delivery information",
+              "Request details",
+              "goods or services requested, amounts, and any relevant instructions",
             ],
             [
               "Interaction history",
@@ -88,10 +88,10 @@ const sections = [
         </p>
         <ul className="mt-4 space-y-2">
           {[
-            "To process and fulfil your orders for food, goods, and services",
-            "To communicate with you about your order status and delivery",
-            "To remember your preferences and delivery addresses for future convenience",
-            "To resolve any issues or disputes relating to your orders",
+            "To process and fulfil your requests — whether for goods, services, or errands",
+            "To communicate with you about your request status and fulfilment",
+            "To remember your preferences and locations for future convenience",
+            "To resolve any issues or disputes relating to your requests",
             "To improve the quality and reliability of our service",
           ].map((item) => (
             <li key={item} className="flex gap-2">
@@ -158,12 +158,12 @@ const sections = [
         <ul className="mt-4 space-y-2">
           {[
             [
-              "Vendors",
-              "food sellers and merchants who prepare or supply your order. They receive only the order details and delivery location.",
+              "Vendors and service providers",
+              "businesses or individuals who supply goods or fulfil service requests on your behalf. They receive only the details needed to complete your request.",
             ],
             [
               "Dispatch riders",
-              "independent riders who deliver your order. They receive only the pickup location and your delivery address.",
+              "independent riders who handle deliveries. They receive only the pickup location and your delivery address, where applicable.",
             ],
           ].map(([term, def]) => (
             <li key={term} className="flex gap-2">
@@ -340,9 +340,9 @@ export default function Privacy() {
             Plain English summary
           </p>
           <p className="text-white/80 leading-relaxed">
-            Bro is a WhatsApp-based personal assistant service. We collect only
-            the information needed to process your requests and deliver your
-            orders. We do not sell your data to anyone.
+            Bro is a WhatsApp-based personal assistant. We collect only the
+            information needed to handle your requests — goods, services, or
+            errands. We do not sell your data to anyone.
           </p>
         </div>
 

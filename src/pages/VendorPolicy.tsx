@@ -112,8 +112,8 @@ const sections = [
       <>
         <p>
           Bro settles payment to vendors on a per-order basis once delivery has
-          been confirmed. Payment is made via bank transfer to the account
-          details provided during onboarding.
+          been confirmed. Bank account details for settlement are collected at
+          the time of first payout — not during onboarding.
         </p>
         <p className="mt-3">
           The amount settled to the vendor is the agreed order value, net of
@@ -137,9 +137,9 @@ const sections = [
           {[
             "Provide accurate and up-to-date information about their goods, services, pricing, and availability",
             "Fulfil orders in a timely manner consistent with the estimated times communicated to customers",
-            "Maintain appropriate food safety and hygiene standards where food is involved",
+            "Maintain appropriate quality, safety, and legal standards for all goods and services supplied",
             "Respond promptly to messages from the Bro team on WhatsApp",
-            "Notify Bro immediately of any changes to operating hours, menu, or availability",
+            "Notify Bro immediately of any changes to operating hours, product listings, pricing, or availability",
             "Treat Bro riders courteously and ensure orders are packaged appropriately for delivery",
           ].map((item) => (
             <li key={item} className="flex gap-2">

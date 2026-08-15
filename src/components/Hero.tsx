@@ -28,7 +28,7 @@ export default function Hero() {
         </p>
 
         <p className="text-lg md:text-xl text-white/50 max-w-xl leading-relaxed mb-10">
-          Bro is your personal WhatsApp assistant — food, groceries, errands, and more. Wherever you are.
+          Bro is your personal WhatsApp assistant — food, services, errands, and more. Wherever you are.
         </p>
 
         <a

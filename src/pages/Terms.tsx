@@ -7,13 +7,13 @@ const sections = [
     title: "1. About Bro",
     content: (
       <p>
-        Bro is a personal assistant and delivery intermediary service operated
-        by <span className="text-white font-medium">Y Labs Limited</span>,
-        incorporated in Nigeria. We help customers order food, groceries, and
-        other goods via WhatsApp. Bro acts as the merchant of record — we
-        coordinate orders, arrange fulfilment through independent vendors, and
-        arrange delivery through independent dispatch riders. When this policy
-        refers to "Bro", "we", "us", or "our", it means Y Labs Limited.
+        Bro is a personal assistant and coordination service operated by{" "}
+        <span className="text-white font-medium">Y Labs Limited</span>,
+        incorporated in Nigeria. We help customers order goods and coordinate
+        service requests via WhatsApp. Bro acts as the merchant of record — we
+        take your request, identify the right vendor or service provider, and
+        arrange fulfilment and delivery through independent partners. When this
+        policy refers to "Bro", "we", "us", or "our", it means Y Labs Limited.
       </p>
     ),
   },
@@ -25,10 +25,10 @@ const sections = [
         <ul className="mt-4 space-y-2">
           {[
             "You send your request to Bro via WhatsApp in plain language.",
-            "Bro identifies the best available vendor for your order and confirms the total cost — including a delivery fee — before you commit.",
-            "You confirm the order and make payment to Bro's account.",
-            "Bro coordinates with the vendor to prepare your order and dispatches an independent rider for delivery.",
-            "The rider delivers your order. Bro settles payment to the vendor and rider on a per-order basis.",
+            "Bro identifies the best available vendor or service provider for your request and confirms the total cost before you commit.",
+            "You confirm and make payment to Bro via a supported payment method.",
+            "Bro coordinates with the vendor or service provider to fulfil your request, and dispatches a rider for delivery where applicable.",
+            "Once fulfilment is confirmed, Bro settles payment to the vendor and rider on a per-order basis, subject to a 3-hour dispute window.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
               <span className="mt-1 flex-shrink-0" style={{ color: "#00e57a" }}>—</span>
@@ -50,18 +50,16 @@ const sections = [
     content: (
       <>
         <p>
-          All orders must be paid for in full before they are confirmed. Payment
-          is made via bank transfer to Bro's account. Bro will send you the
-          account details on WhatsApp when you are ready to confirm your order.
+          All orders and service requests must be paid for in full before they
+          are confirmed. Payment is made via supported payment options — we
+          currently support bank transfer; Bro will provide the account details
+          on WhatsApp when you are ready to confirm.
         </p>
         <p className="mt-3">
-          Bro settles payment to the relevant vendor and dispatch rider on a
-          per-order basis once delivery is complete. Bro does not hold customer
-          funds beyond the time required to complete and settle each order.
-        </p>
-        <p className="mt-3">
-          All prices quoted include a delivery fee. Bro will always confirm the
-          full total — items and delivery — before you make any payment.
+          Bro settles payment to the relevant vendor and dispatch rider once
+          fulfilment is confirmed, subject to a 3-hour dispute window. If a
+          valid dispute is raised within that window, settlement may be held
+          pending resolution.
         </p>
       </>
     ),
@@ -146,12 +144,12 @@ const sections = [
             {
               scenario: "Order cancellation",
               detail:
-                "You may cancel your order before the vendor has begun preparing it. Once preparation has started, cancellations and refunds are not available.",
+                "You may cancel your order before the vendor has begun processing or fulfilling it. Once fulfilment has started, cancellations and refunds are not available.",
             },
             {
               scenario: "Failed delivery",
               detail:
-                "If our rider is unable to reach you and waits at least 10 minutes, the order may be marked as failed. You may request redelivery within 90 minutes. Freshness of redelivered orders is not guaranteed.",
+                "If our rider is unable to reach you and waits at least 10 minutes, the order may be marked as failed. You may request redelivery within 90 minutes.",
             },
             {
               scenario: "Vendor cancellation",
@@ -161,7 +159,7 @@ const sections = [
             {
               scenario: "Taste or quality preferences",
               detail:
-                "We do not offer refunds for subjective preferences about taste or portion size. We will pass your feedback to the vendor.",
+                "We do not offer refunds for subjective preferences about quality, style, or quantity where the order was fulfilled as described. We will pass your feedback to the vendor.",
             },
           ].map((item) => (
             <div key={item.scenario}>
@@ -322,11 +320,11 @@ export default function Terms() {
             Plain English summary
           </p>
           <p className="text-white/80 leading-relaxed">
-            Bro is a WhatsApp-based ordering service run by Y Labs Limited. You
-            pay us, we coordinate with vendors and riders to get your order to
-            you. If something goes wrong, we have a clear refund and dispute
-            process. We settle vendors and riders per order — we don't hold your
-            money.
+            Bro is a WhatsApp-based personal assistant run by Y Labs Limited.
+            You pay us, we coordinate with vendors and partners to fulfil your
+            request — goods, services, or errands. Funds are settled per order
+            once fulfilment is confirmed, subject to a 3-hour dispute window.
+            If something goes wrong, we have a clear refund and dispute process.
           </p>
         </div>
 

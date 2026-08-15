@@ -8,19 +8,19 @@ const faqs = [
   },
   {
     q: 'How do I pay?',
-    a: 'Bank transfer or cash on delivery. Bro will send you account details once your order is confirmed.',
+    a: 'Bank transfer. Bro will send you the account details on WhatsApp once you confirm your request.',
   },
   {
-    q: 'How long does delivery take?',
-    a: 'Usually 30–60 minutes depending on your location and what you order.',
+    q: 'How long does fulfilment take?',
+    a: 'Usually 30–60 minutes depending on your location and what you request.',
   },
   {
-    q: 'Is there a delivery fee?',
-    a: 'Yes, a small delivery fee applies. Bro will always tell you the total before you confirm.',
+    q: 'Are there any fees?',
+    a: 'A small fee may apply depending on your request. Bro will always tell you the total before you confirm.',
   },
   {
-    q: 'Can I schedule an order in advance?',
-    a: "Not yet — Bro handles same-day orders for now.",
+    q: 'Can I schedule a request in advance?',
+    a: "Not yet — Bro handles same-day requests for now.",
   },
 ]
 
