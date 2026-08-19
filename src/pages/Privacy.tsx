@@ -73,8 +73,10 @@ const sections = [
           ))}
         </ul>
         <p className="mt-4">
-          We do not collect payment card details. Payments are made directly via
-          bank transfer to account details we provide.
+          Payments are processed through our third-party payment processor,
+          Paystack. We do not collect or store your card, bank, or other
+          payment credentials — these are entered directly with Paystack and
+          are subject to Paystack's own privacy and security practices.
         </p>
       </>
     ),
@@ -165,6 +167,10 @@ const sections = [
               "Dispatch riders",
               "independent riders who handle deliveries. They receive only the pickup location and your delivery address, where applicable.",
             ],
+            [
+              "Payment processor (Paystack)",
+              "used to process customer payments and to settle payouts to vendors and riders. We share the information necessary to process a transaction, such as order amount and a transaction reference. For vendors and riders, we share bank account details with Paystack solely to enable settlement. Paystack's handling of this information is governed by its own privacy policy, available at paystack.com/en/privacy.",
+            ],
           ].map(([term, def]) => (
             <li key={term} className="flex gap-2">
               <span className="text-accent mt-1 flex-shrink-0">—</span>
@@ -175,8 +181,10 @@ const sections = [
           ))}
         </ul>
         <p className="mt-4">
-          Neither vendors nor riders receive your phone number or any other
+          Vendors and riders do not receive your phone number or any other
           personal information beyond what is needed to complete your delivery.
+          Paystack receives only the information described above, solely to
+          process payments and settlements.
         </p>
       </>
     ),

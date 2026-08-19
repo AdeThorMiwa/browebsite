@@ -28,7 +28,7 @@ const sections = [
             "Bro identifies the best available vendor or service provider for your request and confirms the total cost before you commit.",
             "You confirm and make payment to Bro via a supported payment method.",
             "Bro coordinates with the vendor or service provider to fulfil your request, and dispatches a rider for delivery where applicable.",
-            "Once fulfilment is confirmed, Bro settles payment to the vendor and rider on a per-order basis, subject to a 3-hour dispute window.",
+            "Once fulfilment is confirmed, Bro's payment processor settles payment to the vendor and rider directly, on the processor's standard settlement schedule. Bro does not hold or control the timing of vendor and rider payouts. If a valid dispute is raised, Bro will resolve it in accordance with the Refund Policy below, including recovering funds from the vendor or rider where applicable.",
           ].map((item) => (
             <li key={item} className="flex gap-2">
               <span className="mt-1 flex-shrink-0" style={{ color: "#00e57a" }}>—</span>
@@ -56,10 +56,13 @@ const sections = [
           on WhatsApp when you are ready to confirm.
         </p>
         <p className="mt-3">
-          Bro settles payment to the relevant vendor and dispatch rider once
-          fulfilment is confirmed, subject to a 3-hour dispute window. If a
-          valid dispute is raised within that window, settlement may be held
-          pending resolution.
+          Payment to the relevant vendor and dispatch rider is settled directly
+          by Bro's payment processor on the processor's standard settlement
+          schedule. Bro does not hold customer funds or control when vendors
+          and riders are paid. Where a valid dispute is raised, Bro will refund
+          the customer directly and, where the vendor or rider has already been
+          paid for the order in question, will recover the disputed amount from
+          the vendor or rider in accordance with the Vendor Policy.
         </p>
       </>
     ),
@@ -174,6 +177,17 @@ const sections = [
         <p className="mt-6">
           Approved refunds are returned via bank transfer to the account used
           for payment, typically within 2–3 business days.
+        </p>
+        <p className="mt-4">
+          <span className="text-white font-semibold">Fraud and abuse.</span>{" "}
+          Bro reserves the right to decline a refund, or to request additional
+          evidence before approving one, where there is reasonable indication
+          of misuse — including repeated claims from the same customer,
+          inconsistent or implausible reports, or a pattern suggesting the
+          refund process is being used to obtain goods or services without
+          payment. For higher-value orders, Bro may require corroborating
+          evidence (such as rider delivery confirmation or vendor
+          packaging/handoff photos) before a refund is approved.
         </p>
       </>
     ),
@@ -322,9 +336,11 @@ export default function Terms() {
           <p className="text-white/80 leading-relaxed">
             Bro is a WhatsApp-based personal assistant run by Y Labs Limited.
             You pay us, we coordinate with vendors and partners to fulfil your
-            request — goods, services, or errands. Funds are settled per order
-            once fulfilment is confirmed, subject to a 3-hour dispute window.
-            If something goes wrong, we have a clear refund and dispute process.
+            request — goods, services, or errands. Vendor and rider payments
+            are settled directly by our payment processor. If something goes
+            wrong, we have a clear refund and dispute process, including
+            recovering funds from a vendor or rider where a claim is upheld
+            after they've already been paid.
           </p>
         </div>
 

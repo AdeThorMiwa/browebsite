@@ -111,9 +111,11 @@ const sections = [
     content: (
       <>
         <p>
-          Bro settles payment to vendors on a per-order basis once delivery has
-          been confirmed. Bank account details for settlement are collected at
-          the time of first payout — not during onboarding.
+          Vendor payouts are settled directly by Bro's payment processor on the
+          processor's standard settlement schedule, once an order is placed.
+          Bro does not hold vendor funds or control the timing of settlement.
+          Bank account details for settlement are collected at the time of
+          first payout — not during onboarding.
         </p>
         <p className="mt-3">
           The amount settled to the vendor is the agreed order value, net of
@@ -121,9 +123,13 @@ const sections = [
           vendor at onboarding.
         </p>
         <p className="mt-3">
-          Settlements may be withheld or reversed in the event of a valid
-          customer refund claim, vendor cancellation, or confirmed breach of
-          this policy.
+          Where a customer refund claim is upheld, a vendor cancellation occurs,
+          or this policy is breached, and the vendor has already received
+          settlement for the order in question, Bro reserves the right to
+          deduct the relevant amount from the vendor's future settlements,
+          invoice the vendor directly for repayment, or take other reasonable
+          recovery action. Vendors agree to repay any amount recovered under
+          this clause promptly.
         </p>
       </>
     ),
@@ -141,6 +147,7 @@ const sections = [
             "Respond promptly to messages from the Bro team on WhatsApp",
             "Notify Bro immediately of any changes to operating hours, product listings, pricing, or availability",
             "Treat Bro riders courteously and ensure orders are packaged appropriately for delivery",
+            "Provide evidence of order fulfilment (such as a packaging or handoff photo) via WhatsApp when reasonably requested by Bro in connection with a customer dispute",
           ].map((item) => (
             <li key={item} className="flex gap-2">
               <span className="mt-1 flex-shrink-0" style={{ color: "#00e57a" }}>—</span>
